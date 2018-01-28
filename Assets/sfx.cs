@@ -26,17 +26,17 @@ public class sfx : MonoBehaviour {
 
     public void playshortbeep()
     {
-        source.PlayOneShot(shortbeep[Random.Range(0, 1)]);
+        source.PlayOneShot(shortbeep[Random.Range(0, 4)]);
     }
 
     public void playlongbeep()
     {
-        source.PlayOneShot(longbeep[Random.Range(0, 1)]);
+        source.PlayOneShot(longbeep[Random.Range(0, 4)]);
     }
 
     public void playmeow()
     {
-        source.PlayOneShot(meow[Random.Range(0, 3)]);
+        source.PlayOneShot(meow[Random.Range(0, 4)]);
     }
 
     public void playstart()

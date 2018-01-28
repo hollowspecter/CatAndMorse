@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class HitDetection : MonoBehaviour {
 
+    public BeautifulText text;
+
 	int failCounter = 0;
+    int goodcounter = 0;
 	void Start () {
 		
 	}
@@ -15,9 +18,7 @@ public class HitDetection : MonoBehaviour {
 		{	
 			if(Physics.Raycast(transform.position, transform.right,20.0f))
 			{
-				//vivi buschtsabe
-				Debug.Log("hit");
-
+                goodcounter++;
 			}
 
 			else
@@ -31,8 +32,12 @@ public class HitDetection : MonoBehaviour {
 		{
 			//vivis schipfwortt
 			failCounter = 0;
-			Debug.Log("fuck");
+            text.BadWord();
 		}
-		
+		if (goodcounter > 4)
+        {
+            goodcounter = 0;
+            text.GoodWord();
+        }
 	}
 }

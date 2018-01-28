@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class BeautifulText : MonoBehaviour {
 
     private Text text;
+    public GameObject spawner;
 
     private string originaltext;
     private string[] words;
@@ -40,6 +41,7 @@ public class BeautifulText : MonoBehaviour {
         if (counter == words.Length)
         {
             sfx.instance.playende();
+            Destroy(spawner);
         }
 
     }

@@ -9,24 +9,14 @@ public class CodeSpawner : MonoBehaviour {
 
 		
 	}
-	
-	void Update () {
-		//spawn object in interval
-		if(Input.GetButtonDown("Fire1"))
-		{
-			Instantiate(prefab, new Vector3(0,6,0),Quaternion.identity);
-		}
-
-
-	}
 
 	IEnumerator RandomSpawn()
 	{
 		while(true)
 		{
-		float rando = Random.Range(0.4f, 1.5f);
+		float rando = Random.Range(0.2f, 1.0f);
 		yield return new WaitForSeconds(rando);
-		Instantiate(prefab, new Vector3(0,6,0),Quaternion.identity);
+		Instantiate(prefab, transform.position, Quaternion.identity);
 		}
 	}
 }
