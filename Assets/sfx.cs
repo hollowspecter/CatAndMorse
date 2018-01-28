@@ -19,6 +19,11 @@ public class sfx : MonoBehaviour {
         source = GetComponent<AudioSource>();
     }
 
+    private void Start()
+    {
+        playstart();
+    }
+
     public void playshortbeep()
     {
         source.PlayOneShot(shortbeep[Random.Range(0, 1)]);
