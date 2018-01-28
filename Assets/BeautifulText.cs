@@ -29,6 +29,7 @@ public class BeautifulText : MonoBehaviour {
 
     public void BadWord()
     {
+        sfx.instance.playmeow();
         int index = Random.Range(0, badwords.Length);
         text.text += badwords[index] + " ";
         counter++;
