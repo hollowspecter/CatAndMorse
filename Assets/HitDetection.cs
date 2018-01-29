@@ -5,6 +5,7 @@ using UnityEngine;
 public class HitDetection : MonoBehaviour {
 
     public BeautifulText text;
+	public GameObject ps;
 
 	int failCounter = 0;
     int goodcounter = 0;
@@ -19,6 +20,7 @@ public class HitDetection : MonoBehaviour {
 			if(Physics.Raycast(transform.position, transform.right,20.0f))
 			{
                 goodcounter++;
+				Instantiate(ps, new Vector3(0.01f,-1.05f,-2.0f), Quaternion.identity);
 			}
 
 			else
