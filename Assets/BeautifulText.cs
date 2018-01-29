@@ -35,13 +35,14 @@ public class BeautifulText : MonoBehaviour {
         text.text += badwords[index] + " ";
         counter++;
     }
-
+    private bool done = false;
     void Update()
     {
-        if (counter == words.Length)
+        if (counter == words.Length && !done)
         {
             sfx.instance.playende();
             Destroy(spawner);
+            done = true;
         }
 
     }
